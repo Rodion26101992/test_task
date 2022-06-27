@@ -1,0 +1,52 @@
+@import '../../styles/colors';
+@import '../../styles/mixins';
+
+.infoUserComponent {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+
+  .wrapperInfo {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid $blackColor;
+    border-radius: 20px;
+    padding: 35px;
+
+    .boxLabel {
+      margin: 15px 0
+    }
+
+    label {
+      font-size: 22px;
+      font-weight: 600;
+    }
+
+    span {
+      font-size: 20px;
+      color: $lightBlueColor;
+      margin-left: 10px;
+    }
+
+    span:nth-child(n+3) {
+      margin-left: 0;
+    }
+
+    .wrapperButtons {
+      margin-top: 20px;
+
+      #btEdit, #btDelete {
+        min-width: 100px;
+        @include myButton;
+        text-decoration: none;
+        color: $blackColor;
+      }
+
+      #btDelete {
+        background: $deleteColor;
+        margin-left: 15px;
+      }
+    }
+  }
+
+}

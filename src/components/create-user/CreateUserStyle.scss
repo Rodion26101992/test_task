@@ -1,0 +1,26 @@
+@import "../../styles/mixins";
+@import "../../styles/colors";
+
+.crateUserComponent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .wrapperInput {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    border: 1px solid $blackColor;
+    border-radius: 30px;
+    padding: 20px;
+
+    label {
+      margin-top: 20px;
+    }
+
+    input[type=submit] {
+      @include myButton;
+    }
+  }
+}

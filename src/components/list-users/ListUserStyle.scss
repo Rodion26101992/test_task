@@ -1,0 +1,55 @@
+@import "../../styles/mixins";
+@import "../../styles/colors";
+
+.listUserComponent {
+
+  a {
+    text-decoration: none;
+    color: $blackColor;
+  }
+
+  .userCard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    a {
+      min-width: 45%;
+      text-align: center;
+    }
+
+    .infoUser {
+      border: 1px solid $blackColor;
+      border-radius: 15px;
+      background: $bgIfoColor;
+      padding: 10px;
+      margin: 10px 0;
+      :hover {
+        cursor: pointer;
+      }
+
+    }
+
+    span {
+      font-size: 20px;
+      font-weight: 600;
+      margin: 0 10px;
+    }
+
+    .wrapperButtons {
+      display: flex;
+
+      button, a {
+        @include myButton;
+        border-radius: 30px;
+        padding: 10px;
+        margin: 0 10px;
+      }
+
+      button {
+        background: $deleteColor;
+      }
+    }
+  }
+}
