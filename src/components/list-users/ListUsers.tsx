@@ -12,7 +12,7 @@ const ListUsers: FC = () => {
             getListUsers().then(data => {
                 data && data.length !== listUsers.length && setListUsers(data)
             })
-        }, [],
+        }, [listUsers.length],
     );
 
 
@@ -32,10 +32,12 @@ const ListUsers: FC = () => {
                         return setListUsers(listUsers.filter(itemF => itemF.id !== item.id));
                     })}> Delete
                     </button>
-                    <Link to={`/create-user`}>Add</Link>
                 </div>
             </div>
         })}
+        <div className="wrapperLink">
+            <Link id='createUser' to={`/create-user`}>Create new user</Link>
+        </div>
     </div>
 
 };
